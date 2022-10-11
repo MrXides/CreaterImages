@@ -35,7 +35,7 @@ public class Runner {
         mainInput.click();
         mainInput.sendKeys("Cat");
 
-        int i = 150;
+        int i = 850;
         while (i >= 0) {
 
         WebElement lineArt = driver.findElement(By.xpath("//*[@id=\"blur-overlay\"]/div/div/div[1]/div[1]/div[1]/div[2]/div/div[2]/div[12]/div/div/img"));

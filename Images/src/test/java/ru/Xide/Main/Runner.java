@@ -33,7 +33,7 @@ public class Runner {
 
         WebElement mainInput = driver.findElement(By.xpath(input));
         mainInput.click();
-        mainInput.sendKeys("Deer");
+        mainInput.sendKeys("Snake");
 
         int i = 100;
         while (i >= 0) {

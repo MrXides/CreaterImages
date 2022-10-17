@@ -33,12 +33,12 @@ public class Runner {
 
         WebElement mainInput = driver.findElement(By.xpath(input));
         mainInput.click();
-        mainInput.sendKeys("Snake");
+        mainInput.sendKeys("Ronin");
 
         int i = 100;
         while (i >= 0) {
 
-        WebElement lineArt = driver.findElement(By.xpath("//*[@id=\"blur-overlay\"]/div/div/div[1]/div[1]/div[1]/div[2]/div/div[2]/div[12]/div/div/img"));
+        WebElement lineArt = driver.findElement(By.xpath("//*[@id=\"blur-overlay\"]/div/div/div[1]/div[1]/div[1]/div[2]/div/div[2]/div[13]/div/div/img"));
         lineArt.click();
         driver.findElement(By.xpath("//*[@id=\"blur-overlay\"]/div/div/div[1]/div[2]/button")).click();
 

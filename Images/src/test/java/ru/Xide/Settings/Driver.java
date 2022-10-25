@@ -5,35 +5,34 @@ import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.testng.annotations.*;
 import ru.Xide.Enums.Endpoints.Drivers;
-import ru.Xide.Enums.Endpoints.URL;
 
-import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import static java.lang.String.valueOf;
 
-public class Driver {
+
+public class Driver{
 
     public static WebDriver driver; //Экземпляр окна браузера для тестов
-    public static URL Dream = URL.Dream;
     private static final String ChromeDriver = valueOf(Drivers.ChromePath.getValue());
     private static final String Driver = valueOf(Drivers.Driver.getValue());
 
-//    @BeforeTest
-//    public static void beforeTests() {
-//    }
 
-    @Before
-    public void driverSettings() throws Exception {
+    public void driverSettings(String text){
+
+        Map<String, Object> prefs = new HashMap<String, Object>();
+        prefs.put("download.default_directory", "C:\\Users\\Admin\\Documents\\GitHub\\CreaterImages\\Images\\src\\test\\resources\\"+text);
 
         ChromeOptions options = new ChromeOptions();
+        options.setExperimentalOption("prefs", prefs);
         options.setHeadless(false); // визуализация
 
         System.setProperty(Driver,ChromeDriver);
 
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
 
         driver.manage().window().maximize();
 

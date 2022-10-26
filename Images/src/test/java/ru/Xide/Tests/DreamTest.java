@@ -19,8 +19,9 @@ public class DreamTest extends Driver {
     @Test
     public void catNero() throws Exception {
         String topic = "Cat";
+        String dir = "Cats";
 
-        driverSettings(topic);
+        driverSettings(dir);
 
         openNeron(path);
         generateCreate(driver,topic);
@@ -29,8 +30,9 @@ public class DreamTest extends Driver {
     @Test
     public void dogNero() throws Exception {
         String topic = "Dog";
+        String dir = "Dogs";
 
-        driverSettings(topic);
+        driverSettings(dir);
 
         openNeron(path);
         generateCreate(driver,topic);

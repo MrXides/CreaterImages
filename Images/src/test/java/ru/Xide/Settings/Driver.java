@@ -28,7 +28,7 @@ public class Driver{
 
         ChromeOptions options = new ChromeOptions();
         options.setExperimentalOption("prefs", prefs);
-        options.setHeadless(true); // визуализация
+        options.setHeadless(false); // визуализация
 
         System.setProperty(Driver,ChromeDriver);
 

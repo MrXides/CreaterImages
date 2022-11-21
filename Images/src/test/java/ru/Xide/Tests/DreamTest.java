@@ -10,8 +10,6 @@ import static ru.Xide.Enums.Endpoints.URL.Dream;
 import static ru.Xide.Methods.Helpers.MainHelpers.openNeron;
 import static ru.Xide.Methods.Main.MainSteps.generateCreate;
 
-
-
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class DreamTest extends Driver {
 

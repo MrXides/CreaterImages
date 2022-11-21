@@ -11,6 +11,7 @@ import static ru.Xide.Methods.Helpers.MainHelpers.openNeron;
 import static ru.Xide.Methods.Main.MainSteps.generateCreate;
 
 
+
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class DreamTest extends Driver {
 
@@ -24,7 +25,7 @@ public class DreamTest extends Driver {
         driverSettings(dir);
 
         openNeron(path);
-        generateCreate(driver,topic);
+        generateCreate(driver, topic);
     }
 
     @Test
@@ -35,7 +36,7 @@ public class DreamTest extends Driver {
         driverSettings(dir);
 
         openNeron(path);
-        generateCreate(driver,topic);
+        generateCreate(driver, topic);
     }
 
     @Test
@@ -45,7 +46,7 @@ public class DreamTest extends Driver {
         driverSettings(topic);
 
         openNeron(path);
-        generateCreate(driver,topic);
+        generateCreate(driver, topic);
     }
 
     @Test
@@ -55,7 +56,7 @@ public class DreamTest extends Driver {
         driverSettings(topic);
 
         openNeron(path);
-        generateCreate(driver,topic);
+        generateCreate(driver, topic);
     }
 
     @Test
@@ -65,7 +66,7 @@ public class DreamTest extends Driver {
         driverSettings(topic);
 
         openNeron(path);
-        generateCreate(driver,topic);
+        generateCreate(driver, topic);
     }
 
     @Test
@@ -75,6 +76,6 @@ public class DreamTest extends Driver {
         driverSettings(topic);
 
         openNeron(path);
-        generateCreate(driver,topic);
+        generateCreate(driver, topic);
     }
 }

@@ -1,7 +1,6 @@
 package ru.Xide.Settings;
 
 import org.junit.After;
-import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -23,7 +22,7 @@ public class Driver{
 
     public void driverSettings(String text){
 
-        Map<String, Object> prefs = new HashMap<String, Object>();
+        Map<String, Object> prefs = new HashMap<>();
         prefs.put("download.default_directory", "C:\\Users\\Admin\\Documents\\GitHub\\CreaterImages\\Images\\src\\test\\resources\\"+text);
 
         ChromeOptions options = new ChromeOptions();

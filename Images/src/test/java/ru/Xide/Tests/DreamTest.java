@@ -9,6 +9,7 @@ import static ru.Xide.Enums.Endpoints.URL.Dream;
 
 import static ru.Xide.Methods.Helpers.MainHelpers.openNeron;
 import static ru.Xide.Methods.Main.MainSteps.generateCreate;
+import static ru.Xide.Methods.Main.MainSteps.uploadSongs;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class DreamTest extends Driver {
@@ -75,5 +76,16 @@ public class DreamTest extends Driver {
 
         openNeron(path);
         generateCreate(driver, topic);
+    }
+
+    @Test
+    public void songs() throws Exception {
+        String topic = "songs";
+        path =  "http://mp3lalala.ru/music/виа+песняры/";
+
+        driverSettings(topic);
+
+        openNeron(path);
+        uploadSongs(driver);
     }
 }

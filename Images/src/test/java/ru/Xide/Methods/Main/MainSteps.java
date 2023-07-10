@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.List;
+
 import static ru.Xide.Enums.Elements.ElDream.Input;
 
 public class MainSteps {
@@ -31,6 +33,18 @@ public class MainSteps {
             driver.findElement(By.xpath("//*[@id=\"blur-overlay\"]/div/div/div/div[1]/div/button")).click();
             Thread.sleep(2000);
             i--;
+        }
+    }
+
+    public static void uploadSongs(WebDriver driver) throws InterruptedException {
+        Thread.sleep(2000);
+
+        int i = 0;
+        while (i <=200) {
+            List<WebElement> icon = driver.findElements(By.cssSelector("a[class='btn download']"));
+            icon.get(i).click();
+            Thread.sleep(5000);
+            i++;
         }
     }
 }
